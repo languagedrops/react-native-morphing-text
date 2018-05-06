@@ -30,20 +30,26 @@ repositories {
     mavenCentral()
 }
 
-def htextview_version = "0.1.2"
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+
 
 dependencies {
-    compile 'com.facebook.react:react-native:+'
+    implementation 'com.facebook.react:react-native:+'
+    
+    implementation 'com.github.kibotu.HTextView:htextview-base:0.1.28'
+    implementation 'com.github.kibotu.HTextView:htextview-fade:0.1.28'
+    implementation 'com.github.kibotu.HTextView:htextview-line:0.1.28'
+    implementation 'com.github.kibotu.HTextView:htextview-rainbow:0.1.28'
+    implementation 'com.github.kibotu.HTextView:htextview-typer:0.1.28'
 
-    compile "com.hanks:htextview-base:$htextview_version"        // base library
+    implementation 'com.github.kibotu.HTextView:htextview-scale:0.1.28'
+    implementation 'com.github.kibotu.HTextView:htextview-evaporate:0.1.28'
+    implementation 'com.github.kibotu.HTextView:htextview-fall:0.1.28'
 
-    compile "com.hanks:htextview-fade:$htextview_version"        // optional
-    compile "com.hanks:htextview-line:$htextview_version"        // optional
-    compile "com.hanks:htextview-rainbow:$htextview_version"     // optional
-    compile "com.hanks:htextview-typer:$htextview_version"       // optional
-
-    compile "com.hanks:htextview-scale:$htextview_version"       // optional
-    compile "com.hanks:htextview-evaporate:$htextview_version"   // optional
-    compile "com.hanks:htextview-fall:$htextview_version"        // optional
 }
   
